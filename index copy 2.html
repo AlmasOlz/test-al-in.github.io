@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Алгоритм</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7ie1V2g4+tuAZgWEX4e6woJ2z4H5bw8mWy5" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styl.css">
+
+  <style>
+  /* Стили для сетки результатов */
+.cell {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bg-success {
+  background-color: #28a745 !important; /* Зелёный для правильных ответов */
+}
+
+.bg-danger {
+  background-color: #dc3545 !important; /* Красный для неправильных ответов */
+}
+
+/* Сетка для результата */
+#result-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Навигация */
+.navbar {
+  background: #6c757d;
+  color: #fff;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+/* Контейнер викторины */
+.quiz-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-header li {
+  margin: 10px 0;
+}
+
+.quiz-header label {
+  cursor: pointer;
+}
+
+.quiz-header input {
+  margin-right: 10px;
+}
+
+/* Кнопка */
+button#btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#btn:hover {
+  background: #0056b3;
+}
+
+/* Результаты */
+#result-grid {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+  </style>
+</head>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Инженерия тест</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index copy 2.html">Алгоритм тест</a>
+        </li>
+       
+    </div>
+  </div>
+</nav>
+
+<body>
+  <div class="container">
+    <div class="row">
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <h2 id="question">Question text</h2>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="e" class="answer">
+          <label for="e" id="e_text">Answer</label>
+        </li>
+      </ul>
+    </div>
+    <button id="btn">Submit</button>
+  </div>
+</div>
+  <div class="row">
+    <div id="result-grid" class="mt-5"></div>
+</div>
+</div>
+  <script>
+    
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
